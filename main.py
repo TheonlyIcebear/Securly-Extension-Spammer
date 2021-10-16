@@ -2018,10 +2018,10 @@ proxies = ["http://51.91.157.66:80",
             "http://77.247.126.158:42082",
             "http://77.247.126.158:44678",
             "http://138.118.104.106:999"]
-length_of_string = random.choice(range(5, 13))
-name = "".join(random.choice(string.ascii_letters) for i in range(length_of_string))
 def do_request():
   while True:
+    length_of_string = random.choice(range(5, 13))
+    name = "".join(random.choice(string.ascii_letters) for i in range(length_of_string))
     proxy = random.choice(proxies)
     print('Sent Message')
     data={
