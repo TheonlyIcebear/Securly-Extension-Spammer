@@ -1,4 +1,3 @@
-from time import sleep
 import requests
 import random
 import threading
@@ -2026,29 +2025,14 @@ def do_request():
     proxy = random.choice(proxies)
     print('Sent Message')
     data={
-            'site': "",
-            'teacherEmail': "",
-            'reason': "",
-            'otherReason': "",
-            'categories': "Games",
-            'keyword': "",
-            'blockedReason':"site",
-            'policy': "Base/Default Policy",
-            'requesterOU': "-",
-            'requesterSafeSecGroupName': "-",
-            'requester': name + "@willnorth.org",
-            'fid': "administrator@willnorth.org",
-            'i2n': "",
-    }
-    data={
  'categories': "Games",
  'keyword':"",
  'blockedReason': "site",
  'policy:': "Base/Default Policy",
  'requesterOU': "-",
  'requesterSafeSecGroupName': "-",
- 'requester': name + "@willnorth.org",
- 'fid': "administrator@willnorth.org",
+ 'requester': name + "@TEACHERSGMAIL EXTENSION GOES HERE",
+ 'fid': "TEACHERS ADMIN EMAIL GOES HERE",
  'i2n':''
     }
     print(requests.post(web, data=data).text)
