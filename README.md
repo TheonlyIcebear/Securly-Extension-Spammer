@@ -22,7 +22,7 @@ Just go a securly blocked page then press inspect element. On the element tab se
             params['i2n'] = "";
             sendEmail(params);
 ```
-Copy everything inside the <script> tags and then paste it into the console. Then copy this part of the code
+Copy everything inside the <script> tags and then paste it into the console. Then copy this part of the code and paste it into the console
 ```
             var params={};
             params['site']= $('#permissionSite').val();
