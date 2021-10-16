@@ -22,7 +22,40 @@ Just go a securly blocked page then press inspect element. On the element tab se
             params['i2n'] = "";
             sendEmail(params);
 ```
-Copy everything inside the <script> tags and then paste it into the console. Then copy this part of the code and paste it into the console
+Copy and paste this into the console
+```
+    function sendEmail(obj){
+        $.post( "app/api/sendtwl",obj)
+            .done(function( data ) {
+                window.scroll(0,0);
+                resetFormDetails();
+                $("#mailSuccess").text(data.message);
+                $("#mailSuccess").show();
+                setTimeout(function(){
+                    $("#mailSuccess").hide();
+                }, 5000);
+            })
+            .fail(function(error){
+                window.scroll(0,0);
+                resetFormDetails();
+                $("#mailSuccess").text(error.message);
+                $("#mailSuccess").show();
+                $("#mailSuccess").css('background','#fd9292');
+                setTimeout(function(){
+                    $("#mailSuccess").hide();
+                    $("#mailSuccess").css('background','#28d9c3');
+                }, 5000);
+            });
+    }
+
+    function resetFormDetails(){
+        $("#contactAdminForm")[0].reset();
+        $("#sendEmail").attr("disabled", true);
+        $('#otherReasonInfo').hide();
+    }
+```
+Then copy the part of the code you found earlier and paste it into the console.
+It should look something like this
 ```
             var params={};
             params['site']= $('#permissionSite').val();
