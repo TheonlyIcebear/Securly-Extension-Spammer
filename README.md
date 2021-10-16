@@ -1,7 +1,7 @@
 # Securly-Extension-Spammer
 A spammer to send mass emails to teachers. (Education Purposes only!)
 # Setup
-Just go a securly blocked page then press inspect element. On the element tab search for the paramatars that look like this
+Just go a securly blocked page(You can do this by going to a blocked website like https://discord.com) then press inspect element. On the element tab search for the paramatars that look like this
 ```
         $('#sendEmail').click(function(ev){
             // Disabled send button once clicked.
