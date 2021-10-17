@@ -72,7 +72,7 @@ It should look something like this
             params['fid'] = "TeachersEmailGoesHere";
             params['i2n'] = "";
 ```
-Then type ``` sendEmail(params); ```
+Then type ``` sendEmail(params); ``` and hit enter
 Go to the network tab inside inspect element and click the sendtwl scroll down to the form data and copy the emails, reason and all the other stuff
 Go into the python and code and replace the email with your schools admin email that you got from the network tab.
 Run the code and boom your done
