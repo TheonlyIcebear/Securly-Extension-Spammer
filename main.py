@@ -4,7 +4,6 @@ import threading
 import names
 import string
 from termcolor import cprint
-web = 
 def do_request():
   while True:
       name = (names.get_full_name()).replace(" ", ".").lower()
